@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Style the text paragraph */
+.text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Style the display items */
+.display-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Style the individual display items */
+.time,
+.mistakes,
+.WPM {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Style the "Try again" button */
+.try {
+  background-color: #042c56;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.try:hover {
+  background-color: #478cd5;
+}
