@@ -1,0 +1,9 @@
+const data = [
+  "The sun was setting behind the mountains, casting a warm orange glow across the tranquil lake. As the day came to a close, a sense of peace settled over the landscape, and the world seemed to slow down, embracing the serenity of the evening.",
+  "In the bustling city, people hurriedly rushed to their destinations, their footsteps echoing against the concrete sidewalks. Neon signs flickered to life, illuminating the streets with a kaleidoscope of colors, creating a vivid tapestry of urban life.",
+  "Deep in the heart of the dense jungle, the sounds of exotic birds and insects filled the air. The lush vegetation formed a lush canopy overhead, creating a hidden world of vibrant life and mysterious secrets waiting to be discovered.",
+  "The old bookstore was a treasure trove of forgotten stories and forgotten dreams. The musty scent of aging paper wafted through the air, and the shelves were lined with dusty volumes, each holding the promise of a new adventure.",
+  "On a crisp winter morning, the first snowflakes of the season began to fall from the sky, blanketing the world in a soft, white layer. Children bundled up in their warmest coats and scarves, eagerly anticipating the joy of building snowmen and having snowball fights.",
+  "High in the mountains, a solitary hiker stood on a precipice, gazing out at the vast expanse of wilderness below. The wind whispered through the pines, and the breathtaking view served as a reminder of the beauty and majesty of the natural world.",
+  "The laboratory buzzed with activity as scientists worked diligently on their experiments. Beakers bubbled, computers hummed, and equations filled the chalkboards. In the pursuit of knowledge, they sought answers to some of the universe's most profound questions."
+];
