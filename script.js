@@ -23,7 +23,17 @@ start.addEventListener('click', () => {
     // Input from the user, comparison, and counting of mistakes
      
     textarea.addEventListener('input', () => {
-       // When the user starts typing, record the start time
+       
+
+
+        // To get the no of mistakes
+        const mistakes = checkInput(userInput, expectedText);
+        mistakesDisplay.textContent = "Mistakes: " + mistakes;
+        
+
+        //To count the WPM ----->
+
+       // When the user starts typing, we are recording the start time
         if (startTime === null) {
             startTime = Date.now();
         }
@@ -31,10 +41,7 @@ start.addEventListener('click', () => {
         const endTime = Date.now() / 60000; // Dividing by 60000 to get the time in minutes
         const userInput = textarea.value;
 
-        const mistakes = checkInput(userInput, expectedText);
-        mistakesDisplay.textContent = "Mistakes: " + mistakes;
-
-        // Calculate the number of words typed
+        // Calculating the number of words typed
         const wordsArray = userInput.trim().split(/\s+/); // Split by spaces to count words
         totalWordsTyped = wordsArray.length;
 
@@ -45,7 +52,9 @@ start.addEventListener('click', () => {
             WPM.textContent = "WPM: " + wordsPerMinute;
         }
 
-        // Highlight mistakes in the expected text
+
+
+        // Highlighting mistakes in the expected text
         highlightMistakes(userInput, expectedText);
     });
    
@@ -53,7 +62,7 @@ start.addEventListener('click', () => {
     });
     
 
-
+//for the timer 
 function Time(sec) {
     timer = setInterval(() => {
         time.innerHTML = "Time: " + sec;
@@ -69,15 +78,14 @@ function Time(sec) {
     
 }
 
+
+//Function to display the mistakes
 function checkInput(userInput, expectedText) {
     // Split the user input and expected text into individual characters
     const userInputChars = userInput.split('');
     const expectedTextChars = expectedText.split('');
-
-    // Initialize a variable to count mistakes
     let mistakes = 0;
-
-    // Compare each character
+    // Comparing each character
     for (let i = 0; i < userInputChars.length; i++) {
         if (userInputChars[i] !== expectedTextChars[i]) {
             mistakes++;
@@ -87,6 +95,8 @@ function checkInput(userInput, expectedText) {
     return mistakes;
 }
 
+
+//Function to highlight 
 function highlightMistakes(userInput, expectedText) {
     const userInputChars = userInput.split('');
     const expectedTextChars = expectedText.split('');
