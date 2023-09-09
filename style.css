@@ -1,30 +1,35 @@
+/* Reset some default styles */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  /* font-family: Arial, sans-serif; */
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f0f0f0;
 }
 
 /* Style the container */
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  border-radius: 10px;
 }
 
 /* Style the text paragraph */
 .text {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /* Style the display items */
@@ -38,18 +43,15 @@ body {
 .time,
 .mistakes,
 .WPM {
-  color: green;
+  color: #4CAF50;
   font-size: 18px;
   font-weight: bold;
   flex: 1;
-  font-size: 16px;
 }
-.red{
-  color:red;
-}
+
 /* Style the "Try again" button */
 .start {
-  background-color: #042c56;
+  background-color: #007BFF;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -60,11 +62,47 @@ body {
 }
 
 .start:hover {
-  background-color: #478cd5;
+  background-color: #0056b3;
 }
-.current{
-  color:pink;
+
+/* Highlighted text */
+.correct {
+  color: #4CAF50;
+  font-weight: bold;
 }
-.incorrect{
-  color:rgb(246, 5, 5)
+
+/* Incorrect text */
+.incorrect {
+  color: #F50505;
+  font-weight: bold;
+}
+
+/* Current input character */
+.current {
+  color: #FF1493;
+  font-weight: bold;
+}
+
+/* Additional textarea styling */
+textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+textarea[readonly] {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+.red {
+  color: red;
 }
