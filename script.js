@@ -24,7 +24,7 @@ start.addEventListener('click', () => {
      
     textarea.addEventListener('input', () => {
        
-
+        const userInput = textarea.value;
 
         // To get the no of mistakes
         const mistakes = checkInput(userInput, expectedText);
@@ -39,8 +39,7 @@ start.addEventListener('click', () => {
         }
 
         const endTime = Date.now() / 60000; // Dividing by 60000 to get the time in minutes
-        const userInput = textarea.value;
-
+        
         // Calculating the number of words typed
         const wordsArray = userInput.trim().split(/\s+/); // Split by spaces to count words
         totalWordsTyped = wordsArray.length;
