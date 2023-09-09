@@ -24,6 +24,10 @@ body {
   text-align: center;
   border-radius: 10px;
 }
+.highlight{
+  background-color: yellow;
+  display:inline;
+}
 
 /* Style the text paragraph */
 .text {
@@ -79,8 +83,8 @@ body {
 
 /* Current input character */
 .current {
-  color: #FF1493;
-  font-weight: bold;
+  color: rgb(7, 7, 11);
+  
 }
 
 /* Additional textarea styling */
