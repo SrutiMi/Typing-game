@@ -6,17 +6,20 @@ const WPM = document.querySelector('.WPM');
 const mistakesDisplay = document.querySelector('.mistakes'); // Define the mistakesDisplay variable
 text.innerHTML = "<h3>Lets check your speed. Click the start button to start.</h3>";
 let timer;
-
+let mistakes=0;
 start.addEventListener('click', () => {
     start.innerHTML = "Start Again";
     const startTime= Date.now()/60000;
-
+    mistakesDisplay.textContent = "Mistakes: 0";
+    time.innerHTML = "Time: 0";
+    WPM.textContent = "WPM: 0";
     const index = Math.floor(Math.random() * 7);
     text.innerHTML = data[index];
     const expectedText = text.textContent;
     textarea.value = '';
     textarea.style.display = "block";
     textarea.focus();
+    time.classList.remove('red');
      // Timer
         clearInterval(timer);
         Time(60);
@@ -27,7 +30,7 @@ start.addEventListener('click', () => {
         const userInput = textarea.value;
 
         // To get the no of mistakes
-        const mistakes = checkInput(userInput, expectedText);
+         mistakes = checkInput(userInput, expectedText);
         mistakesDisplay.textContent = "Mistakes: " + mistakes;
         
 
